@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TaskMaster Pro - Smart To-Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <div class="app-header">
+                <div class="header-content">
+                    <h1>TaskMaster Pro <i class="fas fa-check-double"></i></h1>
+                    <div class="header-actions">
+                        <button class="icon-btn" id="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-bar" id="search-bar">
+                    <input type="text" placeholder="Search tasks...">
+                    <button class="icon-btn close-search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="filters-container">
+                <div class="filters">
+                    <span class="filter-btn active" data-filter="all">All</span>
+                    <span class="filter-btn" data-filter="active">Active</span>
+                    <span class="filter-btn" data-filter="completed">Completed</span>
+                </div>
+                <div class="sorting">
+                    <select id="sort-select">
+                        <option value="dueDate">Sort by Due Date</option>
+                        <option value="priority">Sort by Priority</option>
+                        <option value="createdAt">Sort by Creation</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add a new task...">
+                    <button class="primary-btn" onclick="addTask()">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="advanced-options">
+                    <div class="option-group">
+                        <select id="category-select">
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="health">Health</option>
+                        </select>
+                        <select id="priority-select">
+                            <option value="low">Low Priority</option>
+                            <option value="medium">Medium Priority</option>
+                            <option value="high">High Priority</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <input type="datetime-local" id="due-date">
+                        <button class="icon-btn" id="reminder-btn">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <ul id="list-container" class="task-list"></ul>
+
+            <div class="list-footer">
+                <div class="stats">
+                    <span id="tasks-counter">0 items</span>
+                    <span id="completed-counter">0 completed</span>
+                </div>
+                <div class="actions">
+                    <button class="text-btn" onclick="clearCompleted()">Clear Completed</button>
+                    <button class="text-btn" onclick="archiveTasks()">Archive</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div class="modal" id="edit-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Edit Task</h3>
+            <input type="text" id="edit-task-input">
+            <div class="modal-actions">
+                <button class="primary-btn" id="save-edit">Save</button>
+                <button class="secondary-btn" id="cancel-edit">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
