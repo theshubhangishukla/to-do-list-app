@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # To-Do List App 📝
 
 A minimal and interactive to-do list app built with **HTML**, **CSS**, and **JavaScript**. Users can add, mark complete, and delete tasks. All data persists using `localStorage`.
@@ -47,4 +46,4 @@ git branch -M main
 git push -u origin main
 =======
 # to-do-list-app
->>>>>>> 71349b32f4695063bc49a034f46004d156bca1b7
+
