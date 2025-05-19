@@ -1,6 +1,6 @@
 # To-Do List App 📝
 
-A minimal and interactive to-do list app built with **HTML**, **CSS**, and **JavaScript**. Users can add, mark complete, and delete tasks. All data persists using `localStorage`.
+A minimal and interactive to-do list app built with **HTML**, **CSS**,**JavaScript Object Notation (JSON)** and **JavaScript**. Users can add, mark complete, and delete tasks. All data persists using `localStorage`.
 
 ## 💡 Features
 - Add new tasks
