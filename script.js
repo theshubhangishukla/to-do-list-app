@@ -169,5 +169,5 @@ function updateCounters() {
     document.getElementById('completed-counter').textContent = `${completedTasks} completed`;
 }
 
-// Initialize the app
+
 init();
